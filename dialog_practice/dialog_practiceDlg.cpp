@@ -65,6 +65,9 @@ BEGIN_MESSAGE_MAP(CdialogpracticeDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDOK, &CdialogpracticeDlg::OnBnClickedOk)
+	ON_BN_CLICKED(IDCANCEL, &CdialogpracticeDlg::OnBnClickedCancel)
+	ON_LBN_SELCHANGE(IDC_LIST1, &CdialogpracticeDlg::OnLbnSelchangeList1)
 END_MESSAGE_MAP()
 
 
@@ -153,3 +156,23 @@ HCURSOR CdialogpracticeDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CdialogpracticeDlg::OnBnClickedOk()
+{
+	// TODO: Add your control notification handler code here
+	CDialogEx::OnOK();
+}
+
+
+void CdialogpracticeDlg::OnBnClickedCancel()
+{
+	// TODO: Add your control notification handler code here
+	CDialogEx::OnCancel();
+}
+
+
+void CdialogpracticeDlg::OnLbnSelchangeList1()
+{
+	// TODO: Add your control notification handler code here
+}
